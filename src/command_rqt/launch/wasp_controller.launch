@@ -1,0 +1,3 @@
+<launch>
+<node pkg="command_rqt" name="test_odom_imu" type="test_odom5_imu.py"/> 
+</launch>

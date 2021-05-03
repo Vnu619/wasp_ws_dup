@@ -1,0 +1,9 @@
+<launch>
+<node pkg="command_rqt" name="motor_FL" type="motor_FL.py"/> 
+<node pkg="command_rqt" name="motor_FR" type="motor_FR.py"/> 
+<node pkg="command_rqt" name="motor_BL" type="motor_BL.py"/> 
+<node pkg="command_rqt" name="motor_BR" type="motor_BR.py"/> 
+<!--node pkg="command_rqt" name="test_odom_individual" type="test_odom_individual.py"/--> 
+<node pkg="command_rqt" name="wasp_controller" type="wasp_controller.py"/>
+<!--include file="$(find wasp_joy)/launch/wasp_joy.launch"/-->
+</launch>
