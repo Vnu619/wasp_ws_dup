@@ -1,0 +1,8 @@
+prefix=/home/wasp1/wasp_ws/install
+
+Name: waypoint_navi
+Description: Description of waypoint_navi
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

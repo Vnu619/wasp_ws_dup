@@ -1,0 +1,13 @@
+<launch>
+<node pkg="wasp_controller" name="motor_FL" type="motor_FL.py"/> 
+<node pkg="wasp_controller" name="motor_FR" type="motor_FR.py"/> 
+<node pkg="wasp_controller" name="motor_BL" type="motor_BL.py"/> 
+<node pkg="wasp_controller" name="motor_BR" type="motor_BR.py"/> 
+<node pkg="wasp_controller" name="lifting_motor_FL" type="lifting_motor_FL.py"/> 
+<node pkg="wasp_controller" name="lifting_motor_FR" type="lifting_motor_FR.py"/> 
+<node pkg="wasp_controller" name="lifting_motor_BL" type="lifting_motor_BL.py"/> 
+<node pkg="wasp_controller" name="lifting_motor_BR" type="lifting_motor_BR.py"/> 
+<!--node pkg="wasp_controller" name="test_odom_individual" type="test_odom_individual.py"/--> 
+<node pkg="wasp_controller" name="wasp_controller" type="wasp_controller.py"/>
+<include file="$(find wasp_joy)/launch/wasp_joy.launch"/>
+</launch>

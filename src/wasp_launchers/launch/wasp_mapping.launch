@@ -1,0 +1,15 @@
+<launch>
+  <include file="$(find vectornav)/launch/vectornav.launch"/>
+  <!--node pkg="vectornav" type="imu_repub.py" name="imu_repub" output="screen" /--> 
+<include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch"/>
+<!--include file="$(find sick_tim)/launch/sick_tim571_2050101.launch"/-->
+<include file="$(find wasp_controller)/launch/wasp_controller_individual.launch"/>
+
+
+ #### sensore fusion the noise odom, imu and wheels odom  and publish the odom to baselink #############################
+  <include file="$(find robot_localization)/launch/mapping_ekf_template.launch"/>
+  <include file="$(find wasp_launchers)/launch/wasp_gmapping.launch"/>
+
+<node type="rviz" name="rviz" pkg="rviz" args="-d $(find wasp_launchers)/rviz/mapping.rviz"/>
+</launch>
+

@@ -1,0 +1,15 @@
+<launch>
+<node pkg="joy" type="joy_node" name="joy_node"/>
+<node pkg="wasp_joy" type="wasp_joy_node" name="wasp_joy_node"/>
+<include file="$(find sick_tim)/launch/sick_multi.launch"/>
+<include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch"/>
+
+
+<node pkg="wasp_controller" name="motor_FL" type="motor_FL.py"/> 
+<node pkg="wasp_controller" name="motor_FR" type="motor_FR.py"/> 
+<node pkg="wasp_controller" name="motor_BL" type="motor_BL.py"/> 
+<node pkg="wasp_controller" name="motor_BR" type="motor_BR.py"/> 
+<!--node pkg="wasp_controller" name="test_odom_individual" type="test_odom_individual.py"/--> 
+<node pkg="wasp_controller" name="wasp_controller" type="wasp_controller.py"/>
+<!--include file="$(find wasp_joy)/launch/wasp_joy.launch"/-->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/wasp1/wasp_ws/devel
+
+Name: wasp_joy
+Description: Description of wasp_joy
+Version: 0.0.0
+Cflags: -I/home/wasp1/wasp_ws/devel/include -I/home/wasp1/wasp_ws/src/wasp_joy/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

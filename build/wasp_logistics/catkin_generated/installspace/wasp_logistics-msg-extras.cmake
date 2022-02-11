@@ -1,0 +1,2 @@
+set(wasp_logistics_MESSAGE_FILES "msg/logistics.msg;msg/LogisticsAction.msg;msg/LogisticsActionGoal.msg;msg/LogisticsActionResult.msg;msg/LogisticsActionFeedback.msg;msg/LogisticsGoal.msg;msg/LogisticsResult.msg;msg/LogisticsFeedback.msg;msg/TrolleyAlignAction.msg;msg/TrolleyAlignActionGoal.msg;msg/TrolleyAlignActionResult.msg;msg/TrolleyAlignActionFeedback.msg;msg/TrolleyAlignGoal.msg;msg/TrolleyAlignResult.msg;msg/TrolleyAlignFeedback.msg")
+set(wasp_logistics_SERVICE_FILES "srv/GetPose.srv")

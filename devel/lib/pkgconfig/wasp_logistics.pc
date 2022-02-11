@@ -1,0 +1,8 @@
+prefix=/home/wasp1/wasp_ws/devel
+
+Name: wasp_logistics
+Description: Description of wasp_logistics
+Version: 0.0.0
+Cflags: -I/home/wasp1/wasp_ws/devel/include -I/home/wasp1/wasp_ws/src/wasp_logistics/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

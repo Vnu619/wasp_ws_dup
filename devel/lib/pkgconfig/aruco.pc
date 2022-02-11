@@ -1,0 +1,8 @@
+prefix=/home/wasp1/wasp_ws/devel
+
+Name: aruco
+Description: Description of aruco
+Version: 2.1.1
+Cflags: -I/home/wasp1/wasp_ws/src/aruco_ros/aruco/include
+Libs: -L${prefix}/lib -laruco
+Requires: 

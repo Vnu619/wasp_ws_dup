@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="wasp_joy" pkg="wasp_joy" type="wasp_joy">
+  <param name="footprint" type="str" value="[[1.5, 1.5], [1.5, -1.5], [-1.5, -1.5], [-1.5, 1.5]]" />
+</node>
+\endverbatim
+

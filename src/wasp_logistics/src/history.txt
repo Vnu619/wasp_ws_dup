@@ -1,0 +1,1002 @@
+ roslaunch laser_filters intensity_filter_example.launch
+  997  roslaunch laser_filters range_filter_example.launch 
+  998  roslaunch laser_filters intensity_filter_example.launch
+  999  roslaunch laser_filters range_filter_example.launch 
+ 1000  roslaunch laser_filters intensity_filter_example.launch
+ 1001  roslaunch laser_filters speckle_filter_example.launch 
+ 1002  rosrun joy joy_node
+ 1003  roscore
+ 1004  cd wasp_test
+ 1005  source devel/setup.bash
+ 1006  rosrun wasp_joy wasp_joy_logi_server 
+ 1007  catkin_make
+ 1008  rosrun wasp_joy wasp_joy_logi_server 
+ 1009  catkin_make
+ 1010  rosrun wasp_joy wasp_joy_logi_server 
+ 1011  catkin_make
+ 1012  rosrun wasp_joy wasp_joy_logi_server 
+ 1013  catkin_make
+ 1014  rosrun wasp_joy wasp_joy_logi_server 
+ 1015  catkin_make
+ 1016  rosrun wasp_joy wasp_joy_logi_server 
+ 1017  catkin_make
+ 1018  rosrun wasp_joy wasp_joy_logi_server 
+ 1019  catkin_make
+ 1020  rosrun wasp_joy wasp_joy_logi_server 
+ 1021  catkin_make
+ 1022  roslaunch sick_tim sick_multi.launch 
+ 1023  cd wasp_ws/src/command_rqt/src/
+ 1024  python bms_example.py 
+ 1025  cd
+ 1026  cd /media/sutd_wasp/data1/scan
+ 1027  ls
+ 1028  rosbag play -l 2nd.bag 
+ 1029  rosbag play -l 1st.bag 
+ 1030  ls
+ 1031  rosbag play -l 2021-04-02-16-21-53.bag 
+ 1032  roscore
+ 1033  cd wasp_test
+ 1034  catkin_make
+ 1035  source devel/setup.bash
+ 1036  rosrun wasp_joy wasp_joy_align_server 
+ 1037  catkin_make
+ 1038  rosrun wasp_joy wasp_joy_align_server 
+ 1039  rostopic echo /scan
+ 1040  rosrun wasp_joy wasp_joy_align_server 
+ 1041  catkin_make
+ 1042  rosrun wasp_joy wasp_joy_align_server 
+ 1043  catkin_make
+ 1044  rosrun wasp_joy wasp_joy_align_server 
+ 1045  catkin_make
+ 1046  rosrun wasp_joy wasp_joy_align_server 
+ 1047  catkin_make
+ 1048  rosrun wasp_joy wasp_joy_align_server 
+ 1049  catkin_make
+ 1050  rosrun wasp_joy wasp_joy_align_server 
+ 1051  catkin_make
+ 1052  rosrun wasp_joy wasp_joy_align_server 
+ 1053  catkin_make
+ 1054  rosrun wasp_joy wasp_joy_align_server 
+ 1055  cd src
+ 1056  catkin_create_pkg costmap_laser std_msgs rospy roscpp
+ 1057  cd ~/wasp_ws/src/command_rqt/src
+ 1058  python bms_example.py
+ 1059  source devel/setup.bash
+ 1060  rostopic echo /line_segments 
+ 1061  cd
+ 1062  cd wasp_test/
+ 1063  cd src
+ 1064  git clone https://github.com/kam3k/laser_line_extraction.git
+ 1065  cd ..
+ 1066  catkin_make
+ 1067  source devel/setup.bash 
+ 1068  roslaunch laser_line_extraction example.launch
+ 1069  rostopic list
+ 1070  rostopic echo /line_segments
+ 1071  rostopic info /scan
+ 1072  rostopic echo /line_segments 
+ 1073  cd
+ 1074  cd wasp_test/
+ 1075  source devel/setup.bash
+ 1076  rostopic echo /line_segments 
+ 1077  rviz
+ 1078  rostopic echo /line_segments 
+ 1079  rviz
+ 1080  cd
+ 1081  roslaunch sick_tim sick_tim571_2050101.launch 
+ 1082  roslaunch sick_tim sick_multi.launch 
+ 1083  cd wasp_test/
+ 1084  source devel/setup.bash
+ 1085  rosrun wasp_joy wasp_joy_logi_client 
+ 1086  rostopic echo /amcl_pose 
+ 1087  sudo ds4drv
+ 1088  rviz
+ 1089  cd /opt/ros/melodic/share/cv_bridge/cmake/
+ 1090  sudo gedit cv_bridgeConfig.cmake 
+ 1091  cd wasp_test/
+ 1092  source devel/setup.bash
+ 1093  rosrun wasp_joy wasp_joy_logi_server 
+ 1094  rosrun wasp_joy wasp_joy_node 
+ 1095  roslaunch command_rqt wasp_controller_individual.launch 
+ 1096  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1097  roslaunch command_rqt wasp_controller_individual.launch 
+ 1098  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1099  roslaunch command_rqt wasp_controller_individual.launch 
+ 1100  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1101  roslaunch command_rqt wasp_controller_individual.launch 
+ 1102  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1103  cd wasp_test
+ 1104  cd src
+ 1105  git clone https://github.com/pal-robotics/aruco_ros.git
+ 1106  cd ..
+ 1107  catkin_make install
+ 1108  catkin_make
+ 1109  rosrun joy joy_node 
+ 1110  source devel/setup.bash
+ 1111  cd wasp_test/
+ 1112  source devel/setup.bash
+ 1113  rosrun wasp_joy wasp_joy_align_server 
+ 1114  roscore
+ 1115  cd wasp_ws/src/command_rqt/sr
+ 1116  cd wasp_ws/src/command_rqt/src/
+ 1117  python bms_example.py 
+ 1118  rosrun wasp_joy wasp_joy_node
+ 1119  rviz
+ 1120  cd wasp_test/
+ 1121  rosrun wasp_joy wasp_joy_align_server 
+ 1122  source devel/setup.bash
+ 1123  rosrun rqt_image_view rqt_image_view 
+ 1124  rostopic list
+ 1125  rostopic echo /aruco_single/pose
+ 1126  rostopic echo /aruco_single/result
+ 1127  rostopic list
+ 1128  rostopic echo /aruco_single/position
+ 1129  rostopic list
+ 1130  roscore
+ 1131  source devel/setup.bash
+ 1132  ls /dev/video0 
+ 1133  roslaunch usb_cam-stream.launch
+ 1134  roslaunch aruco_ros usb_cam-stream.launch 
+ 1135  source devel/setup.bash
+ 1136  rostopic list
+ 1137  rosrun image_view image_view image:=/aruco_single/result
+ 1138  cd
+ 1139  cd camera_ws/
+ 1140  cd src
+ 1141  git clone
+ 1142  git clone https://github.com/ros-perception/image_pipeline.git
+ 1143  cd ..
+ 1144  catkin_make
+ 1145  rosdep install camera_calibration
+ 1146  rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/camera/image_raw camera:=/camera
+ 1147  rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/usb_cam/image_raw camera:=/camera
+ 1148  rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/usb_cam/image_raw camera:=/usb_cam
+ 1149  cd wasp_test
+ 1150  catkin_make
+ 1151  sudo apt-get install ros-melodic-usb-cam
+ 1152  source devel/setup.bash
+ 1153  roslaunch aruco_ros single.launch 
+ 1154  cd wasp_ws
+ 1155  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1156  roscore
+ 1157  sudo ds4drv
+ 1158  cd wasp_test/
+ 1159  source devel/setup.bash
+ 1160  roslaunch command_rqt wasp_controller_individual.launch 
+ 1161  rosrun joy joy_node
+ 1162  cd wasp_test
+ 1163  source devel/setup.bash
+ 1164  cd wasp_test/
+ 1165  source devel/setup.bash
+ 1166  rosrun wasp_joy wasp_joy_node
+ 1167  roslaunch sick_tim sick_multi.launch 
+ 1168  roslaunch command_rqt wasp_controller_individual.launch 
+ 1169  rosparam list
+ 1170  roslaunch command_rqt wasp_controller_individual.launch 
+ 1171  rosparam get /laser_filter/polygon_filter/
+ 1172  roslaunch command_rqt wasp_controller_individual.launch 
+ 1173  rosparam get /laser_filter/polygon_filter/
+ 1174  roslaunch command_rqt wasp_controller_individual.launch 
+ 1175  rosrun wasp_joy wasp_joy_node 
+ 1176  history |grep clear
+ 1177  rosservice call /move_base/clear_costmaps "{}"
+ 1178  rosrun wasp_joy wasp_joy_node 
+ 1179  rosservice call /move_base/clear_costmaps "{}"
+ 1180  rosrun wasp_joy wasp_joy_node 
+ 1181  cd wasp_test/
+ 1182  source devel/setup.bash
+ 1183  catkin_make
+ 1184  rosrun wasp_joy wasp_joy_logi_server_mode2
+ 1185  rosrun wasp_joy wasp_joy_server_mode2
+ 1186  catkin_make
+ 1187  rosrun dynamic_params dynamic_params_node 
+ 1188  catkin_make
+ 1189  rosrun wasp_joy wasp_joy_server_mode2
+ 1190  rosrun joy joy_node 
+ 1191  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1192  roscore
+ 1193  roslaunch sick_tim sick_multi.launch 
+ 1194  rviz
+ 1195  cd wasp_ws/src/command_rqt/src/
+ 1196  python bms_example.py 
+ 1197  source devel/setup.bash
+ 1198  rosrun wasp_joy wasp_joy_align_server 
+ 1199  rostopic echo /cmd_vel
+ 1200  rostopic echo /odom
+ 1201  rosrun wasp_joy wasp_joy_align_server 
+ 1202  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1203  sudo apt-get install ros-melodic-eband-local-planner
+ 1204  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1205  rostopic pub /cmd_logi wasp_joy/logistics "liftup: 0.0
+ 1206  liftdown: 1.0
+ 1207  extrude: 0.0
+ 1208  intrude: 0.0" 
+ 1209  rostopic pub /cmd_logi wasp_joy/logistics "liftup: 1.0
+ 1210  liftdown: 0.0
+ 1211  extrude: 0.0
+ 1212  intrude: 0.0" 
+ 1213  rostopic pub /cmd_logi wasp_joy/logistics "liftup: 0.0
+ 1214  liftdown: 0.0
+ 1215  extrude: 0.0
+ 1216  intrude: 0.0" 
+ 1217  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1218  source devel/setup.bash
+ 1219  rosrun wasp_joy wasp_joy_logi_client 
+ 1220  rviz
+ 1221  cd wasp_test/
+ 1222  source devel/setup.bash
+ 1223  rosrun wasp_joy wasp_joy_server_mode2 
+ 1224  catkin_make
+ 1225  rosrun wasp_joy wasp_joy_server_mode2 
+ 1226  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1227  ifconfig
+ 1228  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1229  source devel/setup.bash
+ 1230  rosrun wasp_joy wasp_joy_align_server 
+ 1231  rosrun wasp_joy wasp_joy_node 
+ 1232  history |grep clear
+ 1233  rosservice call /move_base/clear_costmaps "{}"
+ 1234  rostopic echo /cmd_logi
+ 1235  rosservice call /move_base/clear_costmaps "{}"
+ 1236  source devel/setup.bash
+ 1237  rosrun wasp_joy wasp_joy_logi_client 
+ 1238  rostopic info /cmd_logi
+ 1239  cd wasp_ws/src/command_rqt/src/
+ 1240  python bms_example.py 
+ 1241  cd wasp_ws/src/command_rqt/src/
+ 1242  python  bms_example.py 
+ 1243  rostopic list
+ 1244  history |grep clear
+ 1245  rosservice call /move_base/clear_costmaps "{}"
+ 1246  sudo apt-get update
+ 1247  sudo apt-get install -y python-wstool python-rosdep ninja-build stow
+ 1248  mkdir cartographer_ws
+ 1249  cd cartographer_ws/
+ 1250  wstool init src
+ 1251  wstool merge -t src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
+ 1252  wstool update -t src
+ 1253  sudo rosdep init
+ 1254  rosdep update
+ 1255  src/cartographer/scripts/install_abseil.sh
+ 1256  rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
+ 1257  catkin_make_isolated --install --use-ninja
+ 1258  source devel_isolated/setup.bash
+ 1259  source install_isolated/setup.bash
+ 1260  catkin_make_isolated --install
+ 1261  catkin_make_isolated --install --use-ninja
+ 1262  cd /home/sutd_wasp/wasp_ws/src/command_rqt/src
+ 1263  python bms_example.py 
+ 1264  cd cartographer_ws/
+ 1265  catkin_make_isolated --install --use-ninja
+ 1266  source install_isolated/setup.bash 
+ 1267  roslaunch cartographer_ros my_robot.launch 
+ 1268  catkin_make_isolated --install --use-ninja
+ 1269  roslaunch cartographer_ros my_robot.launch 
+ 1270  catkin_make_isolated --install --use-ninja
+ 1271  roslaunch cartographer_ros my_robot.launch 
+ 1272  sudo apt-get install ros-melodic-teb-local-planner
+ 1273  rostopic echo /cmd_vel
+ 1274  scp -r /home/sutd_wasp/wasp_ws/src/command_rqt/src/orienbus.py wasp@10.21.134.157:~/Desktop/.
+ 1275  sudo scp -r /home/sutd_wasp/wasp_ws/src/command_rqt/src/orienbus.py wasp@10.21.134.157:~/Desktop/.
+ 1276  rostopic echo /cmd_vel
+ 1277  rostopic info /scan_multi
+ 1278  rostopic echo /scan_multi
+ 1279  rosrun map_server map_saver -f roarlab
+ 1280  rviz
+ 1281  rosrun wasp_joy wasp_joy_node
+ 1282  roscore
+ 1283  sudo ds4drv
+ 1284  rosrun joy joy_node
+ 1285  rviz
+ 1286  rostopic echo /scan_multi 
+ 1287  rviz
+ 1288  cd
+ 1289  cd wasp_ws
+ 1290  source devel/setup.bash
+ 1291  rviz
+ 1292  rosrun joy joy_node
+ 1293  roslaunch sick_tim sick_multi.launch 
+ 1294  rostopic echo /cmd_vel
+ 1295  rostopic list
+ 1296  rostopic echo /amcl_pose
+ 1297  rosparam list
+ 1298  rosparam list|grep move_base
+ 1299  rosparam list|grep band
+ 1300  rosparam list|grep EB
+ 1301  rostopic echo /amcl_pose
+ 1302  roslaunch command_rqt wasp_controller_individual.launch 
+ 1303  rosparam get /move_base/EBandPlannerROS
+ 1304  rosnode info /waypoint_navigation 
+ 1305  rostopic info /move_base/goal
+ 1306  rostopic echo /move_base/goal
+ 1307  rostopic |grep move_base
+ 1308  rostopic list |grep move_base
+ 1309  rostopic echo /move_base/goal
+ 1310  rostopic list
+ 1311  rostopic echo /move_base/result
+ 1312  rostopic echo /move_base/goal
+ 1313  rostopic echo /amcl_pose
+ 1314  rostopic echo /move_base/goal
+ 1315  rostopic echo /vectornav/IMU 
+ 1316  roslaunch command_rqt wasp_controller_individual.launch 
+ 1317  roscore
+ 1318  sudo ds4drv
+ 1319  rosrun wasp_joy wasp_joy_node 
+ 1320  cd wasp_ws
+ 1321  git init
+ 1322  git commit -a "first_commit"
+ 1323  git commit -all "first_commit"
+ 1324  git add --all
+ 1325  git commit -all "first_commit"
+ 1326  git commit -m "first_commit"
+ 1327  git remote add origin https://github.com/Vnu619/wasp_ws.git
+ 1328  git push -u origin master
+ 1329  cd wasp_ws/src/command_rqt/src/
+ 1330  gedit bms_example.py 
+ 1331  python bms_example.py 
+ 1332  roslaunch command_rqt wasp_controller_individual.launch 
+ 1333  roscore
+ 1334  roslaunch robot_localization navigation_sensorfusion.launch 
+ 1335  rostopic echo /mop_command
+ 1336  rviz
+ 1337  cd wasp_test/
+ 1338  catkin_make
+ 1339  source devel/setup.bash
+ 1340  rosrun wasp_joy wasp_joy_zigzag_navi 
+ 1341  rosrun wasp_joy wasp_joy_node 
+ 1342  roslaunch sick_tim sick_multi.launch 
+ 1343  rosrun joy joy_node
+ 1344  sudo ds4drv
+ 1345  cd wasp_ws/src/command_rqt/src/
+ 1346  python bms_example.py 
+ 1347  history |grep rosser
+ 1348  history |grep rosserial
+ 1349  rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0
+ 1350  rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB
+ 1351  ls /dev/ttyUSB7
+ 1352  rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB7
+ 1353  rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB7 _baud:=9600
+ 1354  ls /dev/ttyACM0
+ 1355  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=9600
+ 1356  sudo chmod 777 /dev/ttyACM0
+ 1357  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=9600
+ 1358  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0
+ 1359  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
+ 1360  roslaunch sick_tim sick_multi.launch 
+ 1361  cd wasp_ws/src/command_rqt/src/
+ 1362  python bms_example.py 
+ 1363  cd
+ 1364  roslaunch sick_tim sick_multi.launch 
+ 1365  sudo ds4drv
+ 1366  roscore
+ 1367  rviz
+ 1368  rosrun wasp_joy wasp_joy_node 
+ 1369  osrun wasp_joy wasp_joy_node 
+ 1370  rosrun wasp_joy wasp_joy_node 
+ 1371  cd
+ 1372  cd cartographer_ws/
+ 1373  history |grep ninja
+ 1374  catkin_make_isolated --install --use-ninja
+ 1375  source install_isolated/setup.bash 
+ 1376  catkin_make_isolated --install --use-ninja
+ 1377  roslaunch cartographer_ros backpack_2d.launch 
+ 1378  catkin_make_isolated --install --use-ninja
+ 1379  roslaunch cartographer_ros backpack_2d.launch 
+ 1380  cd
+ 1381  cd wasp_test
+ 1382  source devel/setup.bash 
+ 1383  catkin_make
+ 1384  rosrun wasp_joy wasp_joy_server_mode2 
+ 1385  catkin_make
+ 1386  cd
+ 1387  cd cartographer_ws/
+ 1388  cd
+ 1389  rostopic list
+ 1390  rosrun rqt_tf_tree rqt_tf_tree 
+ 1391  rosrun map_server map_saver -f roar
+ 1392  cd wasp_test/
+ 1393  source devel/setup.bash 
+ 1394  rosrun wasp_joy wasp_joy_logi_client 
+ 1395  rosrun wasp_joy wasp_joy_node 
+ 1396  cd
+ 1397  cd wasp_ws
+ 1398  catkin_make
+ 1399  history
+ 1400  catkin_make
+ 1401  rostopic list
+ 1402  rqt_graph 
+ 1403  rostopic list
+ 1404  rostopic echo /scan_multi
+ 1405  rostopic info /scan_multi
+ 1406  rostopic echo /scan_multi
+ 1407  rostopic list
+ 1408  rostopic echo /cmd_vel2
+ 1409  rostopic echo /scan_multi
+ 1410  rostopic echo /cmd_vel2
+ 1411  rostopic echo /scan_multi
+ 1412  rviz
+ 1413  rostopic echo /scan_multi.ranges
+ 1414  rostopic echo /scan_multi
+ 1415  rostopic echo /scan_multi/ranges
+ 1416  rostopic echo /scan_multi/ranges[0]
+ 1417  rostopic echo /scan_multi/ranges[270]
+ 1418  rostopic echo /scan_multi/ranges[0]
+ 1419  rostopic echo /scan_multi/ranges[180]
+ 1420  rqt_graph 
+ 1421  rostopic info /scan_multi 
+ 1422  rostopic hz /scan_multi
+ 1423  rostopic echo /scan_multi 
+ 1424  rostopic echo /scan_multi/ranges[270] 
+ 1425  rostopic echo /scan_multi/ranges[180] 
+ 1426  rostopic echo /scan_multi/ranges[135] 
+ 1427  rostopic echo /scan_multi/ranges[235] 
+ 1428  rostopic echo /scan_multi/ranges[135] 
+ 1429  rostopic echo /scan_multi/ranges[255] 
+ 1430  rostopic echo /scan_multi/ranges[225] 
+ 1431  rqt_graph 
+ 1432  rosnode ls
+ 1433  rosnode list
+ 1434  rosnode info /wallf
+ 1435  rosnode info /wallfollow 
+ 1436  roscore
+ 1437  catkin_make
+ 1438  cd ..
+ 1439  catkin_make
+ 1440  cd ..
+ 1441  cd..
+ 1442  cd ..
+ 1443  catkin_make
+ 1444  cd /wasp_ws/src/command_rqt
+ 1445  cd /src/command_rqt
+ 1446  cd src/
+ 1447  cd command_rqt/
+ 1448  roscore
+ 1449  roslaunch sick_tim sick_multi.launch 
+ 1450  rosrun joy joy_node 
+ 1451  cd src/
+ 1452  cd wallfollow/
+ 1453  cd src/
+ 1454  ls
+ 1455  chmod +x wallfollow.cpp 
+ 1456  ./wallfollow.cpp 
+ 1457  rosrun wallfollow wallfollow
+ 1458  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1459  sudo ds4drv
+ 1460  roslaunch command_rqt wasp_controller.launch 
+ 1461  roslaunch command_rqt wasp_controller_individual.launch 
+ 1462  cd wasp_ws/src/command_rqt/src
+ 1463  python bms_example.py 
+ 1464  python bms_example_old.py 
+ 1465  python bms_example.py 
+ 1466  ls /dev/tty wasp_bms
+ 1467  ls /dev/wasp_bms 
+ 1468  ls /dev/wasp_xnergy 
+ 1469  python bms_example.py 
+ 1470  cd ..
+ 1471  catkin_make
+ 1472  cd ..
+ 1473  cd wasp_ws/
+ 1474  catkin_make
+ 1475  python bms_example.py 
+ 1476  python bms_example.py 
+ 1477  cd wasp_ws/
+ 1478  python bms_example.py 
+ 1479  rosrun joy joy_node
+ 1480  cd src
+ 1481  cd command_rqt
+ 1482  cd src
+ 1483  rosrun joy joy_node
+ 1484  rosrun wallfollow.cpp
+ 1485  cd
+ 1486  cd..
+ 1487  cd wasp_ws
+ 1488  cd src
+ 1489  cd wallfollow
+ 1490  rosrun wallfollow.cpp
+ 1491  cd src
+ 1492  rosrun wallfollow wallfollow
+ 1493  rostopic echo /scan_multi/ranges[180]
+ 1494  cd wasp-ws
+ 1495  cd ..
+ 1496  roslaunch command_rqt wasp_controller_individual.launch 
+ 1497  cd wasp_ws
+ 1498  cd src
+ 1499  cd command_rqt
+ 1500  cd src
+ 1501  rosrun wasp_joy wasp_joy_
+ 1502  rosrun wasp_joy wasp_joy
+ 1503  rosrun wasp_joy wasp_joy_node
+ 1504  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1505  roslaunch sick_tim sick_multi.launch 
+ 1506  cd wasp_ws
+ 1507  rostopic echo /scan_multi /ranges[180]
+ 1508  rostopic echo /scan_multi/ranges[180]
+ 1509  rostopic echo /scan_multi/ranges[270]
+ 1510  rviz
+ 1511  catkin make
+ 1512  catkin_make
+ 1513  roscore
+ 1514  cd src
+ 1515  cd command_rqt
+ 1516  roscore
+ 1517  rostopic echo /scan_multi/ranges
+ 1518  rostopic echo /cmd_vel2
+ 1519  sudo ds4drv
+ 1520  cd wasp_ws/src/command_rqt
+ 1521  cd wasp_ws
+ 1522  cd src
+ 1523  cd command_rqt
+ 1524  cd src
+ 1525  sudo ds4drv
+ 1526  python bms_example.py
+ 1527  rostopic echo /scan_multi/ranges[180]
+ 1528  rosrun wasp_joy wasp_joy_node 
+ 1529  rosrun joy joy_node 
+ 1530  cd wasp_ws
+ 1531  cd src
+ 1532  cd command_rqt
+ 1533  cd src
+ 1534  cd..
+ 1535  cd.
+ 1536  cd..
+ 1537  cd ..
+ 1538  catkin_make
+ 1539  roslaunch sick_tim sick_multi.launch 
+ 1540  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1541  cd wasp_ws
+ 1542  cd src
+ 1543  cd wallfollow
+ 1544  cd src
+ 1545  rosrun wallfollow wallfollow
+ 1546  clr
+ 1547  rosrun wallfollow wallfollow
+ 1548  clear
+ 1549  rosrun wallfollow wallfollow
+ 1550  clear
+ 1551  rosrun wallfollow wallfollow
+ 1552  sudo ds4drv
+ 1553  roslaunch command_rqt wasp_controller_individual.launch 
+ 1554  rostopic ec /scan_multi/ranges[180]
+ 1555  rostopic ec /scan_multi/ranges[270]
+ 1556  rostopic echo /scan_multi/ranges[270]
+ 1557  cd wasp_ws
+ 1558  roscore
+ 1559  catkin_make
+ 1560  cd src/
+ 1561  cd wallfollow/
+ 1562  cd src/
+ 1563  rosrun wallfollow wallfollow
+ 1564  cd src
+ 1565  cd wallfollow
+ 1566  cd src
+ 1567  rosrun wallfollow wallfollow
+ 1568  clear
+ 1569  rosrun wallfollow wallfollow
+ 1570  clear
+ 1571  rosrun wallfollow wallfollow
+ 1572  clear
+ 1573  rosrun wallfollow wallfollow
+ 1574  clear
+ 1575  rosrun wallfollow wallfollow
+ 1576  clear
+ 1577  rosrun wallfollow wallfollow
+ 1578  clear
+ 1579  rosrun wallfollow wallfollow
+ 1580  clear
+ 1581  rosrun wallfollow wallfollow
+ 1582  catkin_make
+ 1583  rosrun ds4drv
+ 1584  sudo ds4drv
+ 1585  rosrun joy joy_node 
+ 1586  rosrun wasp_joy wasp_joy_node 
+ 1587  cd wasp_ws
+ 1588  roscore
+ 1589  roslaunch sick_tim sick_multi.launch 
+ 1590  rostopic echo /scan_multi/ranges[180]
+ 1591  rostopic echo /scan_multi/ranges[270]
+ 1592  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1593  roslaunch command_rqt wasp_controller_individual.launch 
+ 1594  roscore
+ 1595  cd wasp_ws
+ 1596  roscore
+ 1597  python bms_example.py
+ 1598  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1599  rosrun wasp_joy wasp_joy_node 
+ 1600  sudo ds4drv
+ 1601  roslaunch sick_tim sick_multi.launch 
+ 1602  roslaunch command_rqt wasp_controller_individual.launch 
+ 1603  cd wasp_ws
+ 1604  roscore
+ 1605  rosrun joy joy_node 
+ 1606  roslaunch sick_tim sick_multi.launch 
+ 1607  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1608  rostopic list
+ 1609  rostopic echo /scan_multi/ranges[270]
+ 1610  cd src
+ 1611  cd wallfollow
+ 1612  cd src
+ 1613  rosrun wallfollow wallfollow
+ 1614  roslaunch command_rqt wasp_controller_individual.launch 
+ 1615  catkin_make
+ 1616  rosrun joy joy_node
+ 1617  rosbag record -a
+ 1618  rosbag record -p
+ 1619  rosbag record -a
+ 1620  rosbag record /cmd_vel -p
+ 1621  rostopic echo -p /cmd_velW > test001.txt
+ 1622  rostopic echo -p /cmd_velW > test002.txt
+ 1623  rostopic echo -p /cmd_velW > test001.txt
+ 1624  cd wasp_ws
+ 1625  roscore
+ 1626  rosrun wasp_joy wasp_joy_node 
+ 1627  sudo ds4drv
+ 1628  roslaunch command_rqt wasp_controller_individual.launch 
+ 1629  shutdown now -h
+ 1630  roslaunch sick_tim sick_multi.launch 
+ 1631  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1632  sudo ds4drv
+ 1633  rosrun joy joy_node
+ 1634  catkin_make
+ 1635  rostopic echo /scan_multi/ranges[270]
+ 1636  rostopic echo /scan_multi/ranges[180]
+ 1637  cd src
+ 1638  cd wallfollow
+ 1639  cd src
+ 1640  rosrun wallfollow wallfollow
+ 1641  cd wasp_ws
+ 1642  roscore
+ 1643  rostopic echo -p /cmd_velW > test001.txt
+ 1644  rostopic echo -p /cmd_velW > 95cm.txt
+ 1645  rostopic echo -p /cmd_velW > 95(2)cm.txt
+ 1646  rostopic echo -p /cmd_velW > 95-2cm.txt
+ 1647  rostopic echo -p /cmd_velW > 62cm.txt
+ 1648  rostopic echo -p /cmd_velW > 80cm.txt
+ 1649  rostopic echo -p /cmd_velW > 80cm_slanted_in.txt
+ 1650  rostopic echo -p /cmd_velW > 80cm_curved_wall.txt
+ 1651  rostopic echo -p /cmd_velW > 80cm_small_curved_wall.txt
+ 1652  rostopic echo -p /cmd_velW > 80cm_small_corner_turn_right.txt
+ 1653  rostopic echo -p /cmd_velW > 80cm_small_corner_turn_rleft.txt
+ 1654  rostopic echo -p /cmd_velW > 80cm_scurved_wall_turn_right.txt
+ 1655  rostopic echo -p /cmd_velW > 80cm_curved_wall_turn_right.txt
+ 1656  rostopic echo -p /cmd_velW > 80cm_corner_turn_right.txt
+ 1657  rostopic echo -p /cmd_velW > flat_wall_100cm.txt
+ 1658  rostopic echo -p /cmd_velW > flat_wall_60cm.txt
+ 1659  roslaunch command_rqt wasp_controller_individual.launch 
+ 1660  rosrun wasp_joy wasp_joy_node
+ 1661  python bms_example.py
+ 1662  roslaunch sick_tim sick_multi.launch 
+ 1663  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1664  roscore
+ 1665  rostopic echo -p /cmd_velW > 80cm_corner_turn_right.txt
+ 1666  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_800.txt
+ 1667  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_1000.txt
+ 1668  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_1000_s_segmented.txt
+ 1669  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_t_onepoint.txt
+ 1670  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_t_onepoinint_800.txt
+ 1671  rostopic echo -p /cmd_velW > 80cm_corner_turn_right_t_+-5.txt
+ 1672  rostopic echo -p /cmd_velW > 80cm_corner_turn_right__+-5_9900.txt
+ 1673  rostopic echo -p /cmd_velW > 80cm_corner_turn_right__+-5_9_900_ver2.txt
+ 1674  rostopic echo -p /cmd_velW > 80cm_corner_turn_rileft.txt
+ 1675  rostopic echo -p /cmd_velW > 80cm_curved_wall_turn_right.txt
+ 1676  rostopic list
+ 1677  rostopic echo /scan_multi/ranges[180]
+ 1678  roslaunch command_rqt wasp_controller_individual.launch 
+ 1679  rostopic echo /scan_multi/ranges[270]
+ 1680  cd wasp_
+ 1681  cd wasp_ws/
+ 1682  catkin_make
+ 1683  sudo ds4drv
+ 1684  rosrun wasp_joy wasp_joy_node 
+ 1685  cd src
+ 1686  cd wallfollow
+ 1687  cd src
+ 1688  rosrun wallfollow wallfollow
+ 1689  rosrun joy joy_node
+ 1690  python bms_example.py
+ 1691  roslaunch command_rqt wasp_controller_individual.launch 
+ 1692  sudo ds4drv
+ 1693  rosrun wasp_joy wasp_joy_node
+ 1694  roslaunch sick_tim sick_multi.launch
+ 1695  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1696  cd wasp_ws
+ 1697  roscore
+ 1698  rosrun joy joy_node
+ 1699  roslaunch command_rqt wasp_controller_individual.launch 
+ 1700  rosrun joy joy_node 
+ 1701  rosrun wasp_joy wasp_joy_node 
+ 1702  sudo ds4drv
+ 1703  cd wasp_ws/
+ 1704  roscore
+ 1705  roslaunch sick_tim sick_multi.launch 
+ 1706  python bms_example.py
+ 1707  cd wasp_ws
+ 1708  roscore
+ 1709  sudo ds4drv
+ 1710  cd wasp_ws
+ 1711  rosrun joy joy_node 
+ 1712  roslaunch command_rqt wasp_controller_individual.launch 
+ 1713  rosrun wasp_joy wasp_joy_node 
+ 1714  ls /dev/wasp*
+ 1715  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1716  roslaunch sick_tim sick_multi.launch .launch
+ 1717  cd wasp_ws
+ 1718  source devel/setup.bash
+ 1719  roslaunch sick_tim sick_multi.launch 
+ 1720  roslaunch command_rqt wasp_controller_individual.launch 
+ 1721  roscore
+ 1722  sudo ds4drv
+ 1723  rosrun joy joy_node
+ 1724  rviz
+ 1725  rosrun wasp_joy wasp_joy_node 
+ 1726  python bms_example.py
+ 1727  ls /dev/wasp*
+ 1728  python bms_example.py
+ 1729  rostopic echo /scan_multi/ranges[180]
+ 1730  rostopic list
+ 1731  rostopic echo /scan_multi/ranges[180]
+ 1732  rostopic echo /scan_multi/ranges[270]
+ 1733  rosrun joy joy_node
+ 1734  rosrun wasp_joy wasp_joy_node 
+ 1735  roslaunch command_rqt wasp_controller_individual.launch 
+ 1736  rostopic echo -p /cmd_velW > test.txt
+ 1737  rostopic echo -p /cmd_velW > Flat_wall_80cm.txt
+ 1738  rostopic echo -p /cmd_velW > Flat_wall_60cm_target_d.txt
+ 1739  rostopic echo -p /cmd_velW > Flat_wall_100cm_target_.txt
+ 1740  rostopic echo -p /cmd_velW > Corner_80cm.txt
+ 1741  rostopic echo -p /cmd_velW > Corner_80cm_2ndtrial.txt
+ 1742  cd wasp_ws
+ 1743  roscore
+ 1744  sudo ds4drv
+ 1745  cd src
+ 1746  cd wallfollow/src
+ 1747  rosrun wallfollow wallfollow
+ 1748  roslaunch sick_tim sick_multi.launch 
+ 1749  rviz
+ 1750  catkin_make
+ 1751  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1752  rosrun joy joy_node
+ 1753  roslaunch command_rqt wasp_controller_individual.launch 
+ 1754  roscore
+ 1755  python bms_example.py
+ 1756  cd wasp_ws/src/command_rqt/src/
+ 1757  python bms_example.py 
+ 1758  sudo ds4drv
+ 1759  rosrun joy joy_node 
+ 1760  rosrun wasp_joy wasp_joy_node 
+ 1761  roscore
+ 1762  cd src/command_rqt/src/
+ 1763  roscore
+ 1764  rosrun joy joy_node 
+ 1765  sudo ds4drv 
+ 1766  roslaunch command_rqt wasp_controller_individual.launch 
+ 1767  rosrun wasp_joy wasp_joy_node
+ 1768  rosrun joy joy_node
+ 1769  sudo ds4drv
+ 1770  roscore 
+ 1771  python bms_example.py
+ 1772  python bms_example.py 
+ 1773  sudo ds4drv
+ 1774  cd
+ 1775  ls
+ 1776  sudo apt-get install ros-melodic-teleop-twist-keyboard 
+ 1777  sudo apt-get update 
+ 1778  sudo apt-get install ros-melodic-teleop-twist-keyboard 
+ 1779  sudo apt-get install ros-melodic-teleop-twist-keyboard --fix-missing
+ 1780  sudo ds4drv
+ 1781  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+ 1782    x: 0.0
+ 1783    y: 0.0
+ 1784    z: 0.0
+ 1785  angular:
+ 1786    x: 0.0
+ 1787    y: 0.0
+ 1788    z: 0.0" 
+ 1789  rqt
+ 1790  roslaunch sick_tim sick_multi.launch 
+ 1791  rosrun wasp_joy wasp_joy_node 
+ 1792  roslaunch ira_laser_tools laserscan_multi_merger.launch 
+ 1793  rqt
+ 1794  cd wasp_ws/
+ 1795  cd src/command_rqt/src/
+ 1796  ls
+ 1797  python bms_example.py 
+ 1798  catkin make
+ 1799  catkin_make
+ 1800  source devel/setup.bash
+ 1801  rqt_graph
+ 1802  roscore
+ 1803  rostopic echo /cmd_vel 
+ 1804  rosrun joy joy_node
+ 1805  rostopic hz /cmd_vel
+ 1806  rostopic list
+ 1807  rostopic echo /cmd_vel
+ 1808  rostopic echo /cmd_logi 
+ 1809  rostopic echo /joy
+ 1810  roslaunch command_rqt wasp_controller_individual.launch 
+ 1811  rostopic list
+ 1812  rostopic echo /joy
+ 1813  cd wasp_ws
+ 1814  catkin_make
+ 1815  source devel/setup.bash 
+ 1816  rosrun wasp_joy wasp_joy_node 
+ 1817  catkin_make
+ 1818  rosrun wasp_joy wasp_joy_node 
+ 1819  catkin_make
+ 1820  rosrun wasp_joy wasp_joy_node 
+ 1821  ls
+ 1822  roslaunch WASP_tele.launch 
+ 1823  rqt_graph
+ 1824  rqt_graph
+ 1825  roscore
+ 1826  roslaunch command_rqt WASP_tele.launc
+ 1827  roslaunch command_rqt WASP_tele.launch
+ 1828  rosrun joy joy_node
+ 1829  rosrun run joy joy_node
+ 1830  rosrun joy joy_node 
+ 1831  rosrun joy joy_node
+ 1832  roslaunch command_rqt WASP_tele.launch 
+ 1833  roscore
+ 1834  sudo cp -r wasp_backup_22jul2021.zip /media/F4B8-4B4E
+ 1835  cd wasp_ws/
+ 1836  roslaunch command_rqt WASP_tele.launch 
+ 1837  cd wasp_w
+ 1838  cd wasp_ws/
+ 1839  roslaunch command_rqt WASP_tele.launch 
+ 1840  cd wasp_ws/
+ 1841  roslaunch command_rqt WASP_tele.launch 
+ 1842  python bms_example.py
+ 1843  roslaunch command_rqt WASP_tele.launch 
+ 1844  rosrun command_rqt bms_example.py
+ 1845  cd wasp_ws/src/command_rqt/src/
+ 1846  ls
+ 1847  sudo chmod +x bms_example.py 
+ 1848  python bms_example.py 
+ 1849  roslaunch command_rqt WASP_tele.launch 
+ 1850  rosrun joy joy_node
+ 1851  roscore
+ 1852  roslaunch command_rqt WASP_tele.launch 
+ 1853  wasp_ws/
+ 1854  cd sr
+ 1855  cd wasp_ws/src/command_rqt/src/
+ 1856  ls
+ 1857  python bms_example.py
+ 1858  catkin_make
+ 1859  cd wasp_ws/
+ 1860  catkin_make
+ 1861  rostopic list
+ 1862  rostopic echo /joy
+ 1863  rostopic list
+ 1864  rostopic echo /joy
+ 1865  roscore
+ 1866  cd wasp_ws/src/command_rqt/src/
+ 1867  ls
+ 1868  python wall_wasp_controller.py 
+ 1869  cd 
+ 1870  cd wasp_ws/src/wasp_joy/src
+ 1871  rosrun joy joy_node
+ 1872  rosrun wasp_joy wasp_joy_node 
+ 1873  roslaunch wasp_joy wasp_joy.launch
+ 1874  cd ..
+ 1875  cd command_rqt/src/
+ 1876  rosrun wasp_joy wasp_joy_node
+ 1877  roslaunch command_rqt WASP_tele.launch 
+ 1878  rosrun wasp_joy wasp_joy_node 
+ 1879  rosrun joy joy_node 
+ 1880  cd wasp_ws/src/command_rqt/src/
+ 1881  ls
+ 1882  python bms_example.py
+ 1883  roscore
+ 1884  cd wasp_ws/
+ 1885  rosrun wasp_joy wasp_joy_node 
+ 1886  rostopic list 
+ 1887  rostopic echo /joy
+ 1888  rostopic list 
+ 1889  rostopic echo /joy
+ 1890  roslaunch command_rqt WASP_tele.launch 
+ 1891  cd wasp_
+ 1892  cd wasp_ws/
+ 1893  cd src/command_rqt/src/
+ 1894  ls
+ 1895  python bms_example.py 
+ 1896  ls /dev/wasp_bms 
+ 1897  python bms_example.py 
+ 1898  cd wasp_ws/src/command_rqt/src/
+ 1899  python bms_example
+ 1900  python bms_example.py 
+ 1901  rosrun joy joy_node
+ 1902  roscore
+ 1903  cd wasp_ws/src/command_rqt/src/
+ 1904  python bms_example.py 
+ 1905  rosrun wasp_joy wasp_joy_node 
+ 1906  python bms_example.py 
+ 1907  rostopic echo /joy
+ 1908  rostopic echo /cmd_vel
+ 1909  roslaunch command_rqt WASP_tele.launch 
+ 1910  python bms_example.py
+ 1911  rosrun command_rqt motor_FL.py 
+ 1912  rosrun joy joy_node
+ 1913  rosrun wasp_joy wasp_joy_node 
+ 1914  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1915  move: 0.0" 
+ 1916  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0
+ 1917  move: 0.0" 
+ 1918  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1919  move: 0.0" 
+ 1920  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0
+ 1921  move: 0.0" --rate 5
+ 1922  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0
+ 1923  move: 0.0" --rate 5
+ 1924  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1925  move: 0.0" --rate 5
+ 1926  rosrun wasp_joy wasp_joy_node 
+ 1927  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1928  move: 0.0"
+ 1929  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1930  move: 0.0" --rate 10
+ 1931  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1932  move: 0.0"
+ 1933  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0
+ 1934  move: 0.0"
+ 1935  rosrun wasp_joy wasp_joy_node 
+ 1936  rostopic pub /cmd_wall wasp_joy/wall "init: -1.0
+ 1937  move: 0.0"
+ 1938  rosrun wasp_joy wasp_joy_node 
+ 1939  rostopic pub /cmd_wall wasp_joy/wall "init: -1.00.0 move: 0.0"
+ 1940  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0 move: 0.0"
+ 1941  rostopic pub /cmd_wall wasp_joy/wall "init: 0.0
+ 1942  move: 0.0"
+ 1943  rosrun wasp_joy wasp_joy_node 
+ 1944  rosrun wasp_joy wasp_joy_node 
+ 1945  cd wasp_ws
+ 1946  catkin_make
+ 1947  ls
+ 1948  sudo rm -rf /build
+ 1949  sudo rm -rf /devel
+ 1950  ls
+ 1951  catkin_make
+ 1952  roslaunch command_rqt wall.launch 
+ 1953  cd src/command_rqt/src/
+ 1954  ls
+ 1955  sudo chmod +x wall_wasp_controller.py 
+ 1956  cd ..
+ 1957  roslaunch command_rqt wall.launch 
+ 1958  cd src
+ 1959  ls
+ 1960  sudo chmod +x Test2.py 
+ 1961  python Test2.py 
+ 1962  roslaunch command_rqt wall.launch 
+ 1963  python Test2.py 
+ 1964  roslaunch command_rqt wall.launch 
+ 1965  python Test2.py 
+ 1966  roscore
+ 1967  roslaunch command_rqt wasp_controller.launch 
+ 1968  roslaunch command_rqt wasp_controller_individual.launch 
+ 1969  rostopic echo /joy
+ 1970  rostopic list
+ 1971  rostopic echo /cmd_wall
+ 1972  rostopic echo /joy
+ 1973  rostopic echo /cmd_wall
+ 1974  rostopic echo /joy
+ 1975  rostopic echo /cmd_wall
+ 1976  rostopic info cmd_wall
+ 1977  rostopic echo /cmd_wall
+ 1978  cd wasp_ws/src/command_rqt/src/
+ 1979  python bms_example.py
+ 1980  python bms_example.py.
+ 1981  python bms_example.py
+ 1982  cd wasp_ws
+ 1983  roslaunch command_rqt WASP_tele.launch 
+ 1984  cd wasp_ws
+ 1985  roslaunch command_rqt WASP_tele.launch 
+ 1986  python bms_example.py
+ 1987  cd wasp_ws
+ 1988  roslaunch command_rqt WASP_tele.launch 
+ 1989  cd wasp_ws/
+ 1990  roslaunch command_rqt WASP_tele.launch 
+ 1991  cd wasp_ws/
+ 1992  roslaunch command_rqt WASP_tele.launch 
+ 1993  cd wasp_ws/src/command_rqt/src/
+ 1994  python bms_example.py
+ 1995  history
+sutd_wasp@sutdwasp-desktop:~$ 
+

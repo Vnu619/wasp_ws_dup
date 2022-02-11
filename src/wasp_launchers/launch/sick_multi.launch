@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+<include file="$(find sick_tim)/launch/sick_tim571_2050101.launch"/>
+<include file="$(find sick_tim)/launch/sick_tim561_2.launch"/>
+</launch>

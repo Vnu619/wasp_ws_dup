@@ -1,0 +1,40 @@
+<launch>
+  <include file="$(find vectornav)/launch/vectornav.launch"/>
+<!--include file="$(find sick_tim)/launch/sick_multi.launch"/-->
+<include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch"/>
+<include file="$(find laser_filters)/examples/polygon_filter_example.launch"/>
+<include file="$(find wasp_controller)/launch/wasp_controller_individual.launch"/>
+
+  <include file="$(find robot_localization)/launch/navigation_ekf_template.launch"/>
+
+
+  <include file="$(find robot_localization)/launch/amcl_demo.launch"/>
+
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+   <!-- <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />-->
+    <rosparam file="$(find robot_localization)/params/move_base_params.yaml" command="load" />
+    <rosparam file="$(find robot_localization)/params/costmap_common_params_burger.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find robot_localization)/params/costmap_common_params_burger.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find robot_localization)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robot_localization)/params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robot_localization)/params/global_planner_params_burger.yaml" command="load" />
+    <rosparam file="$(find robot_localization)/params/dwa_local_planner_params_burger.yaml" command="load" />
+  <!--  <rosparam file="$(find robot_localization)/params/eband_local_planner.yaml" command="load" />-->
+<!--rosparam file="$(find robot_localization)/params/eband_2.yaml" command="load" /-->
+   <!--rosparam file="$(find robot_localization)/params/teb_local_planner.yaml" command="load" /-->
+<!--remap from="cmd_vel" to="mobile_base/commands/velocity"/-->
+    <!--remap from="odom" to="$(arg odom_topic)"/-->
+
+ <!-- <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" />-->
+ </node>
+
+
+  <!--include file="$(find base_controller)/launch/base_controller.launch"/-->
+ <!-- <node pkg="rviz" type="rviz" name="rviz"/>-->
+
+  <!--include file="$(find usb_cam)/launch/usb_cam-test.launch"/-->
+ <!-- <include file="$(find odom_to_trajectory)/launch/create_trajectory.launch"/>-->
+<node type="rviz" name="rviz" pkg="rviz" args="-d $(find wasp_launchers)/rviz/navigation.rviz"/>
+</launch>

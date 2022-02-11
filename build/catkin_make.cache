@@ -1,0 +1,2 @@
+aruco_ros/aruco:aruco_ros/aruco_msgs:aruco_ros/aruco_ros:image_pipeline/camera_calibration:image_pipeline/depth_image_proc:image_pipeline/image_pipeline:image_pipeline/image_proc:image_pipeline/image_publisher:image_pipeline/image_rotate:image_pipeline/image_view:image_pipeline/stereo_image_proc:ira_laser_tools:laser_filters:robot_localization:sick_tim:usb_cam:vectornav:wasp_controller:wasp_joy:wasp_launchers:wasp_logistics:waypoint_navi
+-DCATKIN_DEVEL_PREFIX=/home/wasp1/wasp_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wasp1/wasp_ws/install -G Unix Makefiles
